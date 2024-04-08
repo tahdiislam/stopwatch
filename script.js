@@ -40,17 +40,19 @@ const handleTimeIncrease = () => {
 
 // start stop watch handler
 const handleStart = () => {
-  increaseTime = setInterval(handleTimeIncrease, 1000);
+  if (!increaseTime) increaseTime = setInterval(handleTimeIncrease, 1000);
 };
 
 // handler for stop time
 const handleStop = () => {
   clearInterval(increaseTime);
+  increaseTime = null;
 };
 
 // handle for reset time
 const handleReset = () => {
   clearInterval(increaseTime);
   time = 0;
+  increaseTime = null;
   handleDisplayTime(time);
 };
