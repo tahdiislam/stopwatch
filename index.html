@@ -1,0 +1,52 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stop Watch</title>
+    <link rel="shortcut icon" href="./icons/favicon.svg" type="image/x-icon" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.10.1/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+      src="https://kit.fontawesome.com/7ee5abecf4.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <section
+      class="w-full h-screen flex flex-col justify-center items-center gap-10"
+    >
+      <h1 id="time" class="countdown font-mono text-6xl"></h1>
+      <div class="join">
+        <input
+          class="join-item btn"
+          type="radio"
+          name="options"
+          aria-label="Start"
+          onclick="handleStart()"
+        />
+        <input
+          class="join-item btn"
+          type="radio"
+          name="options"
+          aria-label="Stop"
+          onclick="handleStop()"
+        />
+        <input
+          class="join-item btn"
+          type="radio"
+          name="options"
+          aria-label="Reset"
+          onclick="handleReset()"
+        />
+      </div>
+    </section>
+    <script src="./script.js"></script>
+  </body>
+</html>
